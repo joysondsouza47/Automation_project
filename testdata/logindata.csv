@@ -1,0 +1,7 @@
+testName,username,password,expected
+Valid login 1,standard_user,secret_sauce,success
+Invalid login 1,locked_out_user,secret_sauce,failure
+Valid login 2,problem_user,secret_sauce,success
+Invalid login 2,locked_out_,secret_sauce,failure
+Invalid login 3,locked_out_user,secret,failure
+Invalid login 4, , ,failure

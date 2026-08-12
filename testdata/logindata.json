@@ -1,0 +1,38 @@
+[
+  {
+    "testName": "Valid login 1",
+    "email": "standard_user",
+    "password": "secret_sauce",
+    "expected": "success"
+  },
+  {
+    "testName": "Invalid login 1",
+    "email": "locked_out_user",
+    "password": "secret_sauce",
+    "expected": "failure"
+  },
+  {
+    "testName": "Valid login 2",
+    "email": "problem_user",
+    "password": "secret_sauce",
+    "expected": "success"
+  },
+  {
+    "testName": "Invalid login 2",
+    "email": "locked_out_",
+    "password": "secret_sauce",
+    "expected": "failure"
+  },
+  {
+    "testName": "Invalid login 3",
+    "email": "locked_out_user",
+    "password": "secret",
+    "expected": "failure"
+  },
+  {
+    "testName": "Invalid login 4",
+    "email": "",
+    "password": "",
+    "expected": "failure"
+  }
+]

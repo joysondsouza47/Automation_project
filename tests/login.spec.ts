@@ -18,7 +18,7 @@ test.beforeEach("Page URL",async({page})=>
 
 for(const data of DataProvider.jsonreader("testdata/logindata.json"))
 {
-    test(`Testlogin json ${data.testName} `,async({page})=>
+    test(`Testlogin json ${data.testName} `,async()=>
     {
         await loginpage.getUserName(data.email);
         await loginpage.getPassword(data.password);
@@ -39,7 +39,7 @@ for(const data of DataProvider.jsonreader("testdata/logindata.json"))
 
 for(const data of DataProvider.csvreader("testdata/logindata.csv"))
 {
-    test(`Testlogin csv ${data.testName} `,async({page})=>
+    test(`Testlogin csv ${data.testName} `,async()=>
     {
         await loginpage.getUserName(data.username);
         await loginpage.getPassword(data.password);
@@ -54,7 +54,18 @@ for(const data of DataProvider.csvreader("testdata/logindata.csv"))
             expect(await loginpage.errorMessage()).toBeTruthy();
             console.log("login unsuccessful")
         }
-
+ 
     })
 }
 
+test("login main",async()=>
+    
+{
+
+        await loginpage.getUserName(testconfig.email);
+        await loginpage.getPassword(testconfig.password);
+        await loginpage.Loginbutton();
+
+        expect(await loginpage.itemPage()).toBeTruthy();
+
+})

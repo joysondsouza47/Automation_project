@@ -44,4 +44,4 @@ export class RegistraionPage
     }
 
 }
-//done.
+//done....

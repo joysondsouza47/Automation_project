@@ -42,6 +42,5 @@ export class RegistraionPage
         await this.PhoneNo.fill(number);
         await this.Address.fill(address)
     }
-
 }
-//done....
+//done....,,

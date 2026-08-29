@@ -43,4 +43,3 @@ export class RegistraionPage
         await this.Address.fill(address)
     }
 }
-//done................

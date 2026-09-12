@@ -17,3 +17,4 @@ export class TestConfig
     totalPrice = "$1,204.00"
 } 
 
+//....
